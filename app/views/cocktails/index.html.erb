@@ -1,0 +1,25 @@
+<div class="spacer"></div>
+
+<h1 class="mx-3">Cocktails List</h1>
+
+<div class="spacer"></div>
+
+<div class="container">
+  <% @cocktails.each do |r| %>
+    <%= link_to cocktail_path(r) do %>
+      <div class="card">
+        <%= image_tag "cocktails.jpeg", alt: "Cocktail", width: 200, class: "card-img-top" %>
+        <div class="card-body m-3">
+          <h5 class="card-title"><%= r.name %></h5>
+          <% r.doses.each do |d| %>
+            <p class="card-text"><%= "#{d.description} #{d.ingredient.name}" %></p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="spacer"></div>
+
+<%= link_to "Add Cocktail", new_cocktail_path(@cocktail), class: "btn btn-primary m-3" %>

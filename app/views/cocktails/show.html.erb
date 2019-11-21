@@ -1,0 +1,19 @@
+<div class="spacer"></div>
+
+<div class="container">
+
+  <div class="card">
+    <%= image_tag "cocktails.jpeg", alt: "Cocktail", class: "card-img-top" %>
+
+    <div class="card-body m-3">
+      <h3 class="card-title"><%= r.name %></h3>
+      <% r.doses.each do |d| %>
+        <p class="card-text"><%= "#{d.description} #{d.ingredient.name}" %></p>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
+
+<%# link_to "Add Review", new_cocktail_review_path(@cocktail), class: "btn btn-primary m-3" %>

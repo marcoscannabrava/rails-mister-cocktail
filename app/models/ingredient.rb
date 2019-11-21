@@ -1,11 +1,9 @@
 class Ingredient < ApplicationRecord
   before_destroy :check_cocktails
-
+  validates :name, presence: true, uniqueness: true
   has_many :doses
-  validates :name, uniqueness: true
-  validates :name, presence: true
-  
+
   def check_cocktails
-    false if doses.positive?
+    false if doses.any?
   end
 end
