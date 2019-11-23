@@ -7,13 +7,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag("cocktail-banner.jpeg", class: "img-fluid w-100") %>
+      <%= image_tag("https://res.cloudinary.com/mpc-cloud/image/upload/v1574532370/cocktail-banner_xjqsf4.jpg", class: "img-fluid w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("cocktail-banner2.jpeg", class: "img-fluid w-100") %>
+      <%= image_tag("https://res.cloudinary.com/mpc-cloud/image/upload/v1574532370/cocktail-banner3_lol4vo.jpg", class: "img-fluid w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("cocktail-banner3.jpeg", class: "img-fluid w-100") %>
+      <%= image_tag("https://res.cloudinary.com/mpc-cloud/image/upload/v1574532370/cocktail-banner2_yhar9r.jpg", class: "img-fluid w-100") %>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselCocktails" role="button" data-slide="prev">
@@ -39,8 +39,8 @@
 <div class="container w-50">
   <% @cocktails.each do |r| %>
     <%= link_to cocktail_path(r) do %>
-      <div class="card mb-4">
-        <%= image_tag "cocktails.jpeg", alt: "Cocktail", class: "card-img-top" %>
+      <div class="card mb-4">        
+        <%= cl_image_tag r.photo, height: 400, width: 400, crop: :fill, class: "card-img-top" %>
         <div class="card-body m-3">
           <h5 class="card-title"><%= r.name %></h5>
           <% r.doses.each do |d| %>
