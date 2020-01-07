@@ -14,6 +14,7 @@ ingredients['drinks'].each do |i|
   Ingredient.create(name: i['strIngredient1'])
 end
 
-Cocktail.create(name: "Caipirinha", remote_photo_url: "https://images.unsplash.com/photo-1546171753-97d7676e4602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80")
-Cocktail.create(name: "Cranberry Punch", remote_photo_url: "https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80")
-Cocktail.create(name: "Blood Mary", remote_photo_url: "https://images.unsplash.com/photo-1556855810-ac404aa91e85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80")
+Cocktail.create(name: "Caipirinha", remote_photo_url: "https://res.cloudinary.com/mpc-cloud/image/upload/v1574553923/CookIt/r7ltc0fzsjf9bgn9vwm4.jpg")
+Cocktail.create(name: "Cranberry Punch", remote_photo_url: "https://res.cloudinary.com/mpc-cloud/image/upload/v1575058715/CookIt/bm8jo8fpafyjziavrys4.jpg")
+Cocktail.create(name: "Blood Mary", remote_photo_url: "https://res.cloudinary.com/mpc-cloud/image/upload/v1574553924/CookIt/chwlwmhvigwccfvnfwua.jpg")
+Cocktail.create(name: "Cuba Libre", remote_photo_url: "https://res.cloudinary.com/mpc-cloud/image/upload/v1574532370/CookIt/cocktail-banner3_lol4vo.jpg")
