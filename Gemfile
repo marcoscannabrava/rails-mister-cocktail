@@ -5,7 +5,7 @@ ruby '2.6.3'
 
 gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'cloudinary', '~> 1.9.1'
 gem 'coffee-rails', '~> 4.2'
 gem 'dotenv-rails', groups: [:development, :test]
